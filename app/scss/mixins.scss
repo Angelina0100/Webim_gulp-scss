@@ -1,0 +1,58 @@
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+};
+
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin tablet-sm {
+  @media screen and (max-width: 768px) and (min-width: 577px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin cta-green($border-style: true) {
+  @if $border-style {
+    border: 1px solid currentColor;
+    color: $dark-violet;
+    transition: background-color, border, color .3s ease-in-out;
+    @include tablet-sm {
+      border: 3px solid currentColor;
+    }
+    &:hover,
+    &:active {
+      background-color: $dark-violet;
+      border: none;
+      color: #fff;
+    }
+  } @else {
+    background-color: $green;
+    color: #fff;
+    transition: background-color, border, color .3s ease-in-out;
+    &:hover,
+    &:active {
+      background-color: transparent;
+      border: 1px solid currentColor;
+      color: $green;
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+$dark-violet: #393e6b;
+$green: #2cd3b8;
+$green-font: #0da088;
+$grey: #74757b;
+$light-grey: #e1e2e9;
+$footer-font: #9bb3d1;
+@function darker($color, $tone) {
+  $adjust: -16*$tone;
+  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
