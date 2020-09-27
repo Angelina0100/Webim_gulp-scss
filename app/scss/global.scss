@@ -160,6 +160,10 @@ input {
       height: 8px;
       background-color: #393e6b;
       border-radius: 50%;
+      @include tablet-sm {
+        width: 11px;
+        height: 11px;
+      }
       @include mobile {
         top: 4px;
         width: 5px;
@@ -188,7 +192,7 @@ input {
         margin-top: 26px;
       }
       @include mobile {
-        margin-top: 13px;
+        margin-top: 18px;
         font-size: 11px;
         line-height: 13px;
       }

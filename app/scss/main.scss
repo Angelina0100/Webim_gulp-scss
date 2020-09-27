@@ -27,25 +27,25 @@
   }
   &-burger {
     display: block;
-    width: 24px;
-    margin-top: 11px;
+    width: 59px;
+    margin-top: 24px;
     cursor: pointer;
-    @include tablet-sm {
-      width: 59px;
-      margin-top: 24px;
+    @include mobile {
+      width: 24px;
+      margin-top: 11px;
     }
     span {
       display: block;
       width: 100%;
-      height: 3px;
+      height: 6px;
       background-color: #3fd6bc;
-      @include tablet-sm {
-        height: 6px;
+      @include mobile {
+        height: 3px;
       }
       &:not(:last-of-type) {
-        margin-bottom: 5px;
-        @include tablet-sm {
-          margin-bottom: 12px;
+        margin-bottom: 12px;
+        @include mobile {
+          margin-bottom: 5px;
         }
       }
     }
@@ -68,12 +68,7 @@
     }
 
     @include mobile {
-      display: none;
-      width: 100%;
-      height: 320px;
-      background: #fff;
       padding-left: 28px;
-      position: absolute;
       top: 71px;
       left: 0;
     }
@@ -84,9 +79,6 @@
     @include tablet-sm {
       flex-direction: column;
     }
-    @include mobile {
-      flex-direction: column;
-    }
     &--auth {
       display: flex;
       @include tablet-sm {
@@ -95,7 +87,7 @@
         margin: 0 auto;
       }
       @include mobile {
-        flex-direction: column;
+        margin-left: 0;
       }
     }
   }
@@ -119,9 +111,6 @@
     @include tablet-sm {
       margin-bottom: 10px;
     }
-    @include mobile {
-      margin-bottom: 10px;
-    }
     &--auth {
       margin-right: 39px;
       @include laptop {
@@ -130,20 +119,17 @@
       @include tablet-sm {
         margin-bottom: 10px;
       }
-      @include mobile {
-        margin-bottom: 10px;
-      }
     }
   }
   &-logo {
     @include tablet-sm {
       margin-top: 26px;
     }
+    @include mobile {
+      margin-top: 8px;
+    }
     &__link {
       @include tablet-sm {
-        margin: 0 auto;
-      }
-      @include mobile {
         margin: 0 auto;
       }
     }
@@ -201,7 +187,7 @@ section:nth-of-type(odd) {
         margin-bottom: 32px;
       }
      @include mobile {
-        margin-right: 0;
+        max-width: 255px;
         margin-bottom: 14px;
       }
     }
@@ -210,6 +196,9 @@ section:nth-of-type(odd) {
       @include cta-green(true);
       @include tablet-sm {
         max-width: 100%;
+      }
+      @include mobile {
+        max-width: 255px;
       }
     }
   }
@@ -240,7 +229,7 @@ section:nth-of-type(odd) {
       margin: 7.5% 0 13.5%;
     }
     @include mobile {
-      margin-bottom: 13px;
+      margin-bottom: 20px;
     }
   }
   &-steps {
@@ -260,9 +249,9 @@ section:nth-of-type(odd) {
       justify-content: flex-start;
     }
     @include mobile {
-      margin-left: 0;
+      max-width: 260px;
       min-height: 109px;
-      justify-content: flex-start;
+      margin-left: 0;
     }
   }
   &-step {
@@ -305,7 +294,8 @@ section:nth-of-type(odd) {
       }
       @include mobile {
         margin-right: 37px;
-        padding-bottom: 16px;
+        margin-bottom: 16px;
+        flex: 0 0 41%;
       }
       &:before {
         left: -48px;
@@ -351,7 +341,7 @@ section:nth-of-type(odd) {
   &-section {
     padding: 78px 0 86px;
     @include mobile {
-      padding: 36px 0 41px;
+      padding: 44px 0 41px;
     }
   }
   &-heading {
@@ -368,7 +358,7 @@ section:nth-of-type(odd) {
       margin-top: 51px;
     }
     @include mobile {
-      margin-top: 24px;
+      margin-top: 27px;
     }
   }
   &-step {
@@ -381,6 +371,21 @@ section:nth-of-type(odd) {
         margin-bottom: 25px;
       }
     }
+    &:nth-of-type(2) {
+      @include mobile {
+        margin-bottom: 31px;
+      }
+    }
+    &:nth-of-type(3) {
+      @include mobile {
+        margin-bottom: 27px;
+      }
+    }
+    &:nth-of-type(4) {
+      @include mobile {
+        margin-bottom: 28px;
+      }
+    }
   }
 }
 
@@ -391,7 +396,7 @@ section:nth-of-type(odd) {
       padding: 11.1% 0 10%;
     }
     @include mobile {
-      padding: 36px 0 34px;
+      padding: 39px 0 37px;
     }
   }
   &-text {
@@ -400,7 +405,7 @@ section:nth-of-type(odd) {
       margin-top: 6%;
     }
     @include mobile {
-      margin-top: 17px;
+      margin-top: 22px;
     }
   }
   &-steps {
@@ -457,7 +462,7 @@ section:nth-of-type(odd) {
       padding: 10% 0 13%;
     }
     @include mobile {
-      padding: 35px 0 41px;
+      padding: 41px 0 47px;
     }
   }
   &-heading {
@@ -472,7 +477,8 @@ section:nth-of-type(odd) {
       margin: 7% 0 12%;
     }
     @include mobile {
-      margin-bottom: 23px;
+      margin-bottom: 30px;
+      line-height: 14px;
     }
   }
   &-steps {
@@ -488,7 +494,7 @@ section:nth-of-type(odd) {
     }
     @include mobile {
       min-height: 44px;
-      padding-left: 63px;
+      padding-left: 67px;
     }
     &:before {
       position: absolute;
@@ -506,6 +512,8 @@ section:nth-of-type(odd) {
         width: 44px;
         height: 44px;
         background-size: 100%;
+        transform: none;
+        left: 0;
       }
     }
     &:not(:last-of-type) {
@@ -514,7 +522,7 @@ section:nth-of-type(odd) {
         margin-bottom: 40px;
       }
       @include mobile {
-        margin-bottom: 18px;
+        margin-bottom: 22px;
       }
     }
     &:first-of-type {
@@ -626,6 +634,9 @@ section:nth-of-type(odd) {
     @include tablet-sm {
       max-width: 100%;
     }
+    @include mobile {
+      max-width: 270px;
+    }
   }
 }
 
@@ -636,7 +647,7 @@ section:nth-of-type(odd) {
       padding: 10.5% 0 7%;
     }
     @include mobile {
-      padding: 35px 0 37px;
+      padding: 38px 0 36px;
     }
   }
   &-text {
@@ -708,7 +719,7 @@ section:nth-of-type(odd) {
         margin-bottom: 44px;
       }
       @include mobile {
-        margin-bottom: 11px;
+        margin-bottom: 16px;
         padding-left: 48px;
       }
     }
@@ -726,6 +737,7 @@ section:nth-of-type(odd) {
         transform: scale(1.7);
       }
       @include mobile {
+        left: 0;
         transform: scale(.75);
       }
     }
@@ -757,6 +769,9 @@ section:nth-of-type(odd) {
   }
   &-6 {
     padding-top: 0;
+    @include mobile {
+      padding-top: 11px;
+    }
     &:before {
       background-position: -0px -624px;
     }
@@ -767,6 +782,9 @@ section:nth-of-type(odd) {
     }
     @include tablet-sm {
       margin-bottom: 44px!important;
+    }
+    @include mobile {
+      margin-bottom: 15px!important;
     }
     &:before {
       background-position: -0px -544.2px;

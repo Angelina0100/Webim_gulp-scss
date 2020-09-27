@@ -12,7 +12,7 @@
   }
 }
 @mixin tablet-sm {
-  @media screen and (max-width: 768px) and (min-width: 577px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
@@ -36,6 +36,9 @@
     transition: background-color, border, color .3s ease-in-out;
     @include tablet-sm {
       border: 3px solid currentColor;
+    }
+    @include mobile {
+      border: 1px solid currentColor;
     }
     &:hover,
     &:active {
